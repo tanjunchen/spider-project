@@ -8,10 +8,9 @@ import random
 import json
 from multiprocessing import Pool
 
-
-#模拟浏览器
-USER_AGENTS=[
-"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
+# 模拟浏览器
+USER_AGENTS = [
+    "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
     "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Acoo Browser; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.04506)",
     "Mozilla/4.0 (compatible; MSIE 7.0; AOL 9.5; AOLBuild 4337.35; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
     "Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US)",
@@ -46,8 +45,10 @@ USER_AGENTS=[
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11",
     "Mozilla/5.0 (X11; U; Linux x86_64; zh-CN; rv:1.9.2.10) Gecko/20100922 Ubuntu/10.10 (maverick) Firefox/3.6.10"
 ]
+
+
 def Header():
-    return{
+    return {
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
         "Accept-Encoding": "gzip, deflate, br",
         "Accept-Language": "zh-CN,zh;q=0.9",
@@ -60,49 +61,50 @@ def Header():
 
 def get_one_page(url):
     try:
-        res = requests.get(url,headers=Header())
+        res = requests.get(url, headers=Header())
         if res.status_code == 200:
             return res.text
         return None
     except RequestException as e:
         return None
 
+
 def parse_one_page(html):
     pattern = re.compile('<dd>.*?board-index.*?>(\d+)</i>.*?data-src="(.*?)".*?name"><a'
-                         +'.*?>(.*?)</a>.*?star">(.*?)</p>.*?releasetime">(.*?)</p>'
-                         +'.*?integer">(.*?)</i>.*?fraction">(.*?)</i>.*?</dd>',re.S)
-    items = re.findall(pattern,html)
+                         + '.*?>(.*?)</a>.*?star">(.*?)</p>.*?releasetime">(.*?)</p>'
+                         + '.*?integer">(.*?)</i>.*?fraction">(.*?)</i>.*?</dd>', re.S)
+    items = re.findall(pattern, html)
     for item in items:
-        yield{
-            'index':item[0],
-            'image':item[1],
-            'title':item[2],
-            'actor':item[3].strip()[3:],
-            'time':item[4].strip()[5:],
-            'score':item[5]+item[6]
+        yield {
+            'index': item[0],
+            'image': item[1],
+            'title': item[2],
+            'actor': item[3].strip()[3:],
+            'time': item[4].strip()[5:],
+            'score': item[5] + item[6]
         }
 
+
 def write_to_file(content):
-    with open('result.txt','a',encoding='utf-8') as f:
-        f.write(json.dumps(content,ensure_ascii=False) + '\n')
+    with open('result.txt', 'a', encoding='utf-8') as f:
+        f.write(json.dumps(content, ensure_ascii=False) + '\n')
         f.close()
 
 
 def main(offset):
-    url = 'http://maoyan.com/board/4?offset='+str(offset)
+    url = 'http://maoyan.com/board/4?offset=' + str(offset)
     html = get_one_page(url)
     for item in parse_one_page(html):
         print(item)
         write_to_file(item)
 
+
 def run():
-    #for i in range(10):
+    # for i in range(10):
     #    main(i*10)
     pool = Pool()
-    pool.map(main,[i*10 for i in range(10)])
+    pool.map(main, [i * 10 for i in range(10)])
 
 
 if __name__ == '__main__':
     run()
-
-
