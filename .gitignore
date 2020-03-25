@@ -1,0 +1,7 @@
+# ignore some file
+
+*.xls
+*.xlsx
+*.mp3
+venv
+.idea
