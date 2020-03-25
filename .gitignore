@@ -4,4 +4,4 @@
 *.xlsx
 *.mp3
 venv
-.idea
+#.idea
