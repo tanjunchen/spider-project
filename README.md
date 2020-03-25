@@ -19,7 +19,7 @@
 - [ITChat 微信机器人](wechartrobot)
 - 投融界投资数据
 - 企名片数据抓取(js 加密)
-- 网易云音乐(webdriver 版本 + BS 解析与多进程版本)
+- [网易云音乐(webdriver 版本 + BS 解析与多进程版本)](NeteaseCloudMusic)
 - zcool 轮换验证码实验
 - mitmproxy 代理抓包
 - 猫眼网站(字体混淆)
