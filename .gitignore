@@ -5,3 +5,6 @@
 *.mp3
 venv
 .idea
+
+.csv
+
