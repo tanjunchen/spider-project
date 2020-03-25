@@ -16,7 +16,7 @@
 - 中国木材指数网
 - 全国投资项目在线审批监督平台(webdriver + 表格数据抓取)
 - [中国裁判文书网(前端 JS 加密)](wenshu)
-- ITChat 微信机器人
+- [ITChat 微信机器人](wechartrobot)
 - 投融界投资数据
 - 企名片数据抓取(js 加密)
 - 网易云音乐(webdriver 版本 + BS 解析与多进程版本)
