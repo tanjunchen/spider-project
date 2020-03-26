@@ -30,7 +30,7 @@
 - [InfoQ 文章抓取(asyncio + mongo)](InfoQ)
 - ProxyPool(构建 IP 池)
 - 汽车之家、猫眼(font-face 字体解密)
-- 东方财富网(上证指数 + 深证指数 + 指数成分 + 财务报表数据)
+- [东方财富网(上证指数 + 深证指数 + 指数成分 + 财务报表数据)](EastWealthWebsite)
 - [全国农产品指数(amf 数据传输格式问题)](agriculture)
 
 ## FAQ
