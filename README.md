@@ -6,6 +6,7 @@
 
 ## 爬虫：
 
+- [百科分布式数据抓取案例](BaikeDistributeSpider)
 - [房天下](ChinaHousePrice)
 - [中国邮政编码](Code)
 - [猫眼](maoyan)
