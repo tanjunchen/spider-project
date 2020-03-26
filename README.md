@@ -8,7 +8,7 @@
 
 - [百科分布式数据抓取案例](BaikeDistributeSpider)
 - [房天下](ChinaHousePrice)
-- [中国邮政编码](Code)
+- [中国邮政编码](ZipCode)
 - [猫眼](maoyan)
 - 中国房价行情网
 - 康美中药
