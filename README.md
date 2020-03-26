@@ -25,13 +25,32 @@
 - 猫眼网站(字体混淆)
 - [拉勾网(封 IP + 数据混淆)](lagou)
 - 去哪儿网(数字顺序颠倒)
-- IT桔子网(表格抓取 + 封 IP)
+- [IT桔子网(表格抓取 + 封 IP)](ITOrange)
 - 全网代理(端口混淆 JS 字符替换)
 - [InfoQ 文章抓取(asyncio + mongo)](InfoQ)
 - ProxyPool(构建 IP 池)
 - 汽车之家、猫眼(font-face 字体解密)
 - [东方财富网(上证指数 + 深证指数 + 指数成分 + 财务报表数据)](EastWealthWebsite)
 - [全国农产品指数(amf 数据传输格式问题)](agriculture)
+
+## 主要使用的包
+
+- pandas
+- selenium
+- requests
+- BeautifulSoup
+- lxml(etree)
+- jieba
+- numpy
+- sqlalchemy
+- fake_useragent
+- openpyxl
+- pymysql
+- itchat
+- execjs
+- pytesseract
+- pymongo
+
 
 ## FAQ
 
