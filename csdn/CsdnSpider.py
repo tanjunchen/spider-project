@@ -1,17 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
-# import requests
-# from fake_useragent import UserAgent
-#
-# ua = UserAgent()
-#
-# for i in range(100):
-#     content = requests.get("https://blog.csdn.net/tanjunchen/article/details/84995808",
-#                            headers={'User-Agent': ua.random})
-#     print("正在请求", i)
-
 import requests
 from bs4 import BeautifulSoup
 import multiprocessing
