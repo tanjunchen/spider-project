@@ -2,7 +2,8 @@
 
 ## 爬虫大攻略
 
-[爬虫大攻略](image/SpiderSummary.png)
+![spider](image/SpiderSummary.png)
+
 [下载](image/爬虫大攻略.xmind)
 
 ## 爬虫：
