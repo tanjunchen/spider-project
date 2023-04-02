@@ -1,12 +1,18 @@
 # 爬虫案例
 
+本仓库已迁移至 [tanjunchen/cloud-native-travel](https://github.com/tanjunchen/cloud-native-travel)，欢迎大家关注新仓库，与大家一起分享探索云原生趣事。
+
+## 说明
+
+本仓库案例仅供学习，请勿商用！！！
+
 ## 爬虫大攻略
 
 ![spider](image/SpiderSummary.png)
 
-[下载](image/爬虫大攻略.xmind)
+[下载文档](image/爬虫大攻略.xmind)
 
-## 爬虫：
+## 爬虫案例
 
 - [百科分布式数据抓取案例](BaikeDistributeSpider)
 - [房天下](HouseWorldNewHouse)
